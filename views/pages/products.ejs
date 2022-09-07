@@ -8,10 +8,54 @@
 <body>
   <!--NAVBAR-->
   <%- include('../partials/navbar'); %>
-
-<div class="extra"></div>
+  <!--Brand Caroursel-->
+  <%- include('../partials/brand-carousel') %>
   <!--FOOTER-->
   <%- include('../partials/footer'); %>
   
+
+<script>
+
+  /***brand swiper js**/ 
+  var swiperOptions = {
+  loop: true,
+  freeMode: true,
+  spaceBetween: 40,
+  grabCursor: true,
+  slidesPerView: 7,
+  loop: true,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: true
+  },
+  freeMode: true,
+  speed: 5000,
+  freeModeMomentum: false
+  };
+  var swiper = new Swiper(".swiper-container", swiperOptions);
+
+  /******Scroll top button*****/
+  let calcScrollValue = () => {
+  let scrollProgress = document.getElementById("progress");
+  let progressValue = document.getElementById("progress-value");
+  let pos = document.documentElement.scrollTop;
+  let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let scrollValue = Math.round((pos * 100 / calcHeight));
+
+ if(pos > 100){
+  scrollProgress.style.display = "grid";
+ } else {
+  scrollProgress.style.display = "none";
+ }
+
+ scrollProgress.addEventListener("click", () => {
+  document.documentElement.scrollTop = 0;
+ });
+ scrollProgress.style.background = `conic-gradient(#6479fe ${scrollValue}%, white ${scrollValue}%)`;
+};
+
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
+</script>  
 </body>
 </html>

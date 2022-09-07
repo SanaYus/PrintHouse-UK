@@ -24,6 +24,18 @@ app.get('/solutions', function(req, res) {
   res.render('pages/solutions');
 });
 
+app.get('/managedPrint', function(req, res) {
+  res.render('pages/solutions');
+});
+
+app.get('/onsiteRepairs', function(req, res) {
+  res.render('pages/onsiteRepairs');
+});
+
+app.get('/psa', function(req, res) {
+  res.render('pages/psagreement');
+});
+
 // products page
 app.get('/products', function(req, res) {
   res.render('pages/products');
