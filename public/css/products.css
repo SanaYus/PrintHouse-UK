@@ -8,9 +8,9 @@
   --greyBox: #1c1c1c;
   --creamBox: #F1F1F1;
   --banner-heading-size: 2.8vw;
-  --banner-para-size: ;
+  --banner-para-size: 1.2rem;
   --heading-size: 2.8vw;
-  --para-size: ;
+  --para-size: 1.2rem;;
   --btn-radius: .7rem;
   --btn-border: 2px var(--blue) solid;
   --line-spacing: 10vh;
@@ -169,10 +169,58 @@ a.dropdown-item:hover{
 .nav-link .btn-link:hover{
   color: var(--blue);
 }
- 
 
-.extra{
+/***HERO IMAGE***/
+.hero-image{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.img{
   height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+} 
+.hero-text{
+  position: absolute;
+  top: 45%;
+  right: 13%;
+  font-size: var(--banner-heading-size);
+  float: right;
+  text-align: right;
+  color: white;
+  width: 40%;
+ }
+.hero-text::after{
+  content: "";
+  position: absolute;
+  bottom: -3vh;
+  left: 55%;
+  width: 44%;
+  height: .25vh;
+  background-color: var(--blue);
+}
+
+
+/******Brands swiper CSS*****/
+.brands-section{
+  height: 45vh;
+  padding-top: 8%;
+
+}
+.swiper-container{
+  width: 100%;
+  margin: auto;
+  height: 15vh;
+  display: flex;
+  overflow: hidden;
+}
+.swiper-slide{
+  max-width: 300px !important;
+  width: 100% !important;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /******FOOTER CSS******/
@@ -187,6 +235,7 @@ a.dropdown-item:hover{
   justify-content: space-between;
   align-items: flex-start;
 }
+
 .top-links{
   width: 80%;
   margin:  2rem auto 0 auto;
@@ -194,9 +243,11 @@ a.dropdown-item:hover{
   justify-content: center;
   align-items: center;
 }
+
 .footer .footer-nav{
   flex-direction: row;
 }
+
 .footer .nav-item, .footer .nav-link {
   color:  #FCFCFC;
   margin-right: 1rem;
@@ -224,12 +275,13 @@ a.dropdown-item:hover{
   font-size: 1rem;
 }
 .footer-text-left{
-  width: 80%;
+  width: 70%;
   padding-top: 11px;
   line-height: 2rem;
+  margin-right: 10%;
 }
 .footer-text-right{
-  width: 20%;
+  width: 15%;
   margin: auto;
 }
 .footer-text-right h4{
