@@ -169,7 +169,6 @@ a.dropdown-item:hover{
 .nav-link .btn-link:hover{
   color: var(--blue);
 }
-
 /***HERO IMAGE***/
 .hero-image{
   width: 100%;
@@ -182,27 +181,214 @@ a.dropdown-item:hover{
   width: 100vw;
   object-fit: cover;
 } 
-.hero-text{
+.hero-text-container{
   position: absolute;
-  top: 45%;
-  right: 13%;
-  font-size: var(--banner-heading-size);
-  float: right;
-  text-align: right;
-  color: white;
-  width: 40%;
+  top: 50%;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  width: 35%;
+  z-index: 10;
  }
-.hero-text::after{
-  content: "";
+ h1.hero-text{
+  font-size: var(--banner-heading-size);
+  margin-bottom: 3vh;
+ }
+ p.hero-text{
+  font-size: 1.1em;
+  margin-bottom: 2vh;
+  font-weight: 100;
+  color: rgb(157, 157, 157);
+}
+/*****LEARN MORE BUTTON****/
+.learn-more-btn{
+  text-align: center;
+  padding-top: 4vh;
+}
+.learn-more{
+  padding: .5rem 3rem;
+  border-radius: var(--btn-radius);
+  color: var(--blue);
+  border: var(--btn-border);
+  font-size: 1.2rem;
+  line-height: 40px;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  transition: all .5s;
+}
+.learn-more span{
+  position: relative;
+  z-index: 2;
+
+}
+.learn-more:after{
   position: absolute;
-  bottom: -3vh;
-  left: 55%;
-  width: 44%;
-  height: .25vh;
-  background-color: var(--blue);
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--blue);
+  border-radius: var(--btn-radius);
+  transition: all .5s ease-in-out;
+}
+.learn-more:hover{
+  color: #fff;
+}
+.learn-more:hover:after{
+  width: 100%;
 }
 
+/******PRODUCTS WE OFFER TEXTBOX*****/
+.products-we-offer-container{
+  height: 95vh;
+  width: 100%;
+  background-color: var(--creamBox);
+  padding-top: 10rem;
+}
+.products-we-offer-container .text-box{
+  width: 70%;
+  margin: auto;
+}
+.products-we-offer-container .text-box h1{
+  font-size: var(--heading-size);
+  position: relative;
+  margin-bottom: 5rem;
+  color: var(--grey);
+}
+.products-we-offer-container .text-box h1::after{
+  content: "";
+  width: 20%;
+  height: .4vh;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  background-color: var(--blue);
+}
+.products-we-offer-container .text-box h1 span{
+  color: var(--blue);
+}
+.products-we-offer-container .text-box p{
+  width: 85%;
+  font-size: var(--para-size);
+  color: var(--lightgrey);
+}
 
+/*****PRODUCTS AND DECISION CSS****/
+.products-and-decision-container{
+  height: 100vh;
+  width: 100%;
+  padding: 8rem 0;
+}
+.products-and-decision-container .textbox{
+  width: 65%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+}
+.products-and-decision-container .textbox .box{
+  width: 36%;
+  position: relative;
+}
+.products-and-decision-container .textbox .box::after{
+  content: "";
+  position: absolute;
+  top: 22%;
+  left: -35%;
+  width: 50%;
+  height: .4vh;
+  background-color: var(--blue);
+  transform: rotate(90deg);
+}
+.products-and-decision-container .textbox .box h4{
+  font-size: 1.6rem;
+  padding-bottom: 1.2rem;
+  color: var(--grey);
+}
+.products-and-decision-container .textbox .box p{
+  /* font-size: var(--para-size); */
+  font-size: 1.1rem;
+  color: var(--lightgrey);
+}
+.products-and-decision-container .base-text{
+  width: 70%;
+  margin: auto;
+}
+.products-and-decision-container .base-text .p1{
+  font-size: 1.6rem;
+  color: var(--blue);
+  margin: 0;
+  line-height: 1.6rem;
+}
+.products-and-decision-container .base-text .p2{
+  color: var(--grey);
+  font-size: var(--para-size);
+  margin: 0;
+  padding: 0;
+}
+
+/*******GET A QUOTE CSS****/
+.get-quote-container{
+  width: 100%;
+  height: 80vh;
+  background-color: var(--creamBox);
+  padding-top: 5rem;
+}
+.get-quote-container .textbox{
+  width: 70%;
+  margin: auto;
+}
+.get-quote-container .textbox h1{
+  font-size: var(--heading-size);
+  color: var(--grey);
+  margin-bottom: 4rem;
+  position: relative;
+}
+.get-quote-container .textbox h1:after{
+  content: "";
+  width: 20%;
+  height: .4vh;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  background-color: var(--blue);
+}
+.get-quote-container .textbox p{
+  width: 80%;
+  font-size: var(--para-size);
+  color: var(--lightgrey);
+}
+/*****Product Banner CSS****/
+.product-banner{
+  width: 100%;
+  height: 50vh;
+  background-image: url(/images/our-solutions-banner.png);
+  background-size: cover;
+  padding: 8rem;
+  color: white;
+}
+
+.product-subheading{
+  width: 11%;
+  padding-bottom: .7vh;
+  margin: auto;
+  font-size: 1.5rem;
+  border-bottom: .4vh var(--blue) solid;
+  margin-bottom: 3rem;
+}
+.product-heading {
+  font-size: var(--heading-size);
+}
+.product-heading span{
+  color: var(--blue);
+}
+.get-quote-btn{
+  text-align: left;
+}
 /******Brands swiper CSS*****/
 .brands-section{
   height: 45vh;
