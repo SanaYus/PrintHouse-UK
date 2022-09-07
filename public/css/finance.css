@@ -182,26 +182,66 @@ a.dropdown-item:hover{
   width: 100vw;
   object-fit: cover;
 } 
-.hero-text{
+.hero-text-container{
   position: absolute;
-  top: 45%;
-  right: 13%;
-  font-size: var(--banner-heading-size);
-  float: right;
-  text-align: right;
-  color: white;
-  width: 40%;
+  top: 50%;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  width: 30%;
+  z-index: 10;
  }
-.hero-text::after{
-  content: "";
-  position: absolute;
-  bottom: -3vh;
-  left: 55%;
-  width: 44%;
-  height: .25vh;
-  background-color: var(--blue);
+ h1.hero-text{
+  font-size: var(--banner-heading-size);
+  margin-bottom: 3vh;
+ }
+ p.hero-text{
+  font-size: 1.1em;
+  margin-bottom: 2vh;
+  font-weight: 100;
+  color: rgb(157, 157, 157);
 }
+/*****LEARN MORE BUTTON****/
+.learn-more-btn{
+  text-align: center;
+  padding-top: 4vh;
+}
+.learn-more{
+  padding: .5rem 3rem;
+  border-radius: var(--btn-radius);
+  color: var(--blue);
+  border: var(--btn-border);
+  font-size: 1.2rem;
+  line-height: 40px;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  transition: all .5s;
+}
+.learn-more span{
+  position: relative;
+  z-index: 2;
 
+}
+.learn-more:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--blue);
+  border-radius: var(--btn-radius);
+  transition: all .5s ease-in-out;
+}
+.learn-more:hover{
+  color: #fff;
+}
+.learn-more:hover:after{
+  width: 100%;
+}
 
 /******Brands swiper CSS*****/
 .brands-section{
