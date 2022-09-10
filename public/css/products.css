@@ -258,6 +258,7 @@ a.dropdown-item:hover{
   position: relative;
   margin-bottom: 5rem;
   color: var(--grey);
+  letter-spacing: .5px;
 }
 .products-we-offer-container .text-box h1::after{
   content: "";
@@ -308,6 +309,7 @@ a.dropdown-item:hover{
   font-size: 1.6rem;
   padding-bottom: 1.2rem;
   color: var(--grey);
+  letter-spacing: 1px;
 }
 .products-and-decision-container .textbox .box p{
   /* font-size: var(--para-size); */

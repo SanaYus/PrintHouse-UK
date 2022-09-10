@@ -243,6 +243,98 @@ a.dropdown-item:hover{
   width: 100%;
 }
 
+/*****MEET-BRAND CSS****/
+.meet-brand-container{
+  height: 110vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.meet-brand-img{
+  width: 50%;
+  height: 100%;
+  background-image: url(/images/Finance-made-easy-img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.meet-brand-text{
+  width: 50%;
+  background-color: black;
+  height: 100%;
+  padding: 8% 9%;
+}
+.meet-brand-text h1{
+  font-size: var(--banner-heading-size);
+  color: white;
+  position: relative;
+  margin-bottom: 6vh;
+}
+.meet-brand-text h1:after{
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: .4vh;
+  background-color: var(--blue);
+  bottom: -10%;
+  left: 0;
+ }
+.meet-brand-text h1 span{
+  color: var(--blue);
+}
+.meet-brand-text p{
+  width: 90%;
+  color: #686868;
+  font-size: 1.1rem;
+}
+
+/*******FINANCE PLANS CSS******/
+.finance-plans-container{
+  width: 100%;
+  height: 160vh;
+  padding: 4rem 2rem;
+  box-shadow: 0 0 15px 10px rgb(227, 227, 227);
+}
+.finance-plans-container .textbox-container{
+  width: 60%;
+  margin: auto;
+  padding-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+.finance-plans-container .textbox-container .box{
+  width: 40%;
+  position: relative;
+}
+.products-and-decision-container .textbox .box::after{
+  content: "";
+  position: absolute;
+  top: 22%;
+  left: -35%;
+  width: 50%;
+  height: .4vh;
+  background-color: var(--blue);
+  transform: rotate(90deg);
+}
+.finance-plans-container .textbox-container .box h4{
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  letter-spacing: .5px;
+  padding-bottom: 1.2rem;
+  color: var(--grey);
+}
+.finance-plans-container .textbox-container .box p{
+  font-size: 1.1rem;
+  color: var(--lightgrey);
+}
+.finance-plans-container .textbox-container .img{
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70px;
+  height: 70px;
+}
+
 /******Brands swiper CSS*****/
 .brands-section{
   height: 45vh;
