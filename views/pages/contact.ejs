@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Print House UK | Contact</title>
+   <%- include('../partials/header'); %>
+   <link href="/css/contact.css" type="text/css" rel="stylesheet">
+
+
+</head>
+<body>
+  <!--NAVBAR-->
+  <%- include('../partials/navbar'); %>
+
+  <!--HERO IMAGE AND TEXT-->
+  <div class="hero-image d-flex justify-content-center align-items-center">
+    <img src="/images/Contact-hero-img.png" class="img">
+    <div class="hero-text-container">
+    <h1 class="hero-text text-responsive"><span>Hello,</span> <br> Print House?</h1>
+    <p class="hero-text">You’ve got some Q’s and we’ve got tons and tons of A’s. Ask us about an order, a product, a service or anything we can help with! Don’t be shy - <span>we promise we’re really nice. </span></p>
+    <div class="learn-more-btn">
+      <a href="#contact-form" class="learn-more">
+        <span>Let's connect </span>
+      </a> 
+     </div> 
+    </div>
+  </div>
+
+ <div class="contact-form" id="contact-form">
+  <h1>CONTACT</h1>
+  <p>GET IN TOUCH</p>
+  <form action="" method="POST" class="form">
+   <div class="form-group mb-3">
+    <label for="name" class="form-label">Your Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="" tabindex="1" required maxlength=”25″ >
+   </div>
+
+   <div class="form-group mb-3">
+    <label for="email" class="form-label">Your Email</label>
+    <input type="text" class="form-control" id="email" name="name" placeholder="" tabindex="2" required maxlength=”40″>
+   </div>
+
+   <div class="form-group mb-3">
+    <label for="name" class="form-label">Your Mobile Number</label>
+    <input type="tel"  class="form-control" placeholder="" id="telephone" placeholder="" tabindex="3" required maxlength=”14″>
+   </div>
+
+   <div class="form-group mb-3">
+    <label for="message" class="form-label">Your Message</label>
+    <textarea id="messafe" name="message" rows="4" cols="50">
+    </textarea>
+   </div>
+
+   <div class="form-group">
+    <button type="btn" class="btn btn-outline">Submit</button>
+   </div>
+  </form>
+ </div>
+ 
+
+  <!--BRAND CAROUSEL-->
+  <%- include('../partials/brand-carousel'); %>
+
+  <!--FOOTER-->
+  <%- include('../partials/footer'); %>
+<!-- 
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.894156959443!2d-2.24148858434612!3d53.47035167311694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb1eca118180b%3A0x739a45aa865ef5a1!2sManchester%20Metropolitan%20University!5e0!3m2!1sen!2skw!4v1662845678916!5m2!1sen!2skw" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div> -->
+
+<!-- Use as a Vanilla JS plugin -->
+
+
+
+  <script>
+ /***brand swiper js**/ 
+  var swiperOptions = {
+  loop: true,
+  freeMode: true,
+  spaceBetween: 40,
+  grabCursor: true,
+  slidesPerView: 7,
+  loop: true,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: true
+  },
+  freeMode: true,
+  speed: 5000,
+  freeModeMomentum: false
+};
+var swiper = new Swiper(".swiper-container", swiperOptions);
+
+/******Scroll top button*****/
+let calcScrollValue = () => {
+  let scrollProgress = document.getElementById("progress");
+  let progressValue = document.getElementById("progress-value");
+  let pos = document.documentElement.scrollTop;
+  let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let scrollValue = Math.round((pos * 100 / calcHeight));
+
+ if(pos > 100){
+  scrollProgress.style.display = "grid";
+ } else {
+  scrollProgress.style.display = "none";
+ }
+
+ scrollProgress.addEventListener("click", () => {
+  document.documentElement.scrollTop = 0;
+ });
+ scrollProgress.style.background = `conic-gradient(#6479fe ${scrollValue}%, white ${scrollValue}%)`;
+};
+
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
+   
+
+/**CONTACT FORM JS**/
+
+  </script>
+</body>
+</html>

@@ -46,6 +46,11 @@ app.get('/finance', function(req, res) {
   res.render('pages/finance');
 });
 
+// contact page
+app.get('/contact', function(req, res) {
+  res.render('pages/contact');
+});
+
 app.listen(port, () => {
   console.log(`app listening on port ${port}!`)
 });
