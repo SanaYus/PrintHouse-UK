@@ -245,14 +245,8 @@ a.dropdown-item:hover{
 .learn-more:hover:after{
   width: 100%;
 }
-
-.map{
-  width: 100%;
-  height: 60vh;
-}
 /********CONTACT FORM CSS*******/
 .contact-form{
-  /* height: 110vh; */
   width: 100%;
   background-color: var(--creamBox);
   text-align: center;
@@ -264,12 +258,13 @@ a.dropdown-item:hover{
   letter-spacing: .5rem;
   color: var(--grey);
   opacity: .1;
+  margin-bottom: 3rem;
 }
 .contact-form p{
   width: 100%;
   font-size: 1.5rem;
   position: absolute;
-  top: 14%;
+  top: 13%;
   left: 50%;
   right: 50%;
   transform: translate(-50%,-50%);
@@ -277,17 +272,97 @@ a.dropdown-item:hover{
   color: var(--blue);
   letter-spacing: .1rem;
 }
+/**Main contact box*/
+.contact-box{
+  display: flex;
+  width: 60%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/***details box**/
+.contact-box .contact-details{
+  width: 40%;
+}
+.contact-box .contact-details .text-box{
+  background-color: var(--blue);
+  width: 100%;
+  height: 65vh;
+  border-radius: var(--btn-radius);
+  box-shadow: 0px 0px 15px 10px rgb(230, 230, 230);
+  padding: 2rem 1rem;
+}
+.address{
+  color: rgb(227, 227, 227);
+  font-size: 1.2rem;
+  padding-bottom: .5rem;
+}
+.map{
+  margin-bottom: 1.5rem;
+}
+
+.opening-hours h4{
+  font-size: 1.5rem;
+  color: white;
+  width: 55%;
+  margin: auto;
+  text-align: left;
+  padding-bottom: .5rem;
+}
+.timing{
+  width: 54%;
+  margin: auto;
+  text-align: left;
+  font-size: .9rem;
+  padding-bottom: .5rem;
+  color: #f2f2f2;
+}
+.email{
+  font-size: .8rem;
+  width: 54%;
+  margin: auto;
+  text-align: left;
+  color: #dcdcdcad;
+}
+
+.contact-fill-up-form{
+  width: 60%;
+}
 .contact-form .form{
-  width: 35%;
+  width: 100%;
   padding: 4rem;
   margin: auto;
-  margin-top: 3rem;
-  
   text-align: left;
   background-color: white;
   box-shadow: 0px 0px 15px 10px rgb(227, 226, 226);
+  border-radius: var(--btn-radius);
 }
 
+.form-control{
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 3px;
+  border-bottom: var(--btn-border);
+  padding: 8px;
+  line-height: 0.5rem;
+  margin-bottom: 3rem;
+}
+.form-control:active, .form-control:focus{
+  outline: none;
+  box-shadow: 0 0 5px 1px #6479fe86;
+  border-radius: var(--btn-radius);
+}
+
+.btn-submit-btn{
+  padding: .3rem 5rem;
+  cursor: pointer;
+}
+.btn-submit-btn:hover{
+  color: #6479fe;
+}
+textarea.form-control{
+  line-height: 1.5rem;
+}
 
 /******Brands swiper CSS*****/
 .brands-section{
