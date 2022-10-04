@@ -27,8 +27,46 @@
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
+   
+  .preloader{
+    display: flex;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    opacity: 1;
+    transition: width 1s linear .3s;
+}
+.darkgrey-bar{
+  background-color: var(--lightgrey);
+  width: 20%;
+  height: 100vh;
+  position: absolute;
+  left: 20%;
+}
+.grey-bar{
+  background-color: var(--greyBox);
+  width: 20%;
+  height: 100vh;
+  position: absolute;
+}
+.preloader p{
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  font-size: var(--heading-size);
+  min-width: 20%;
+  color: var(--grey);
+  opacity: 1;
+}
+.hide{
+  width: 0%;
+}
 
-  /***SCROLL BAR**/
+/***SCROLL BAR**/
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -172,14 +210,17 @@ a.dropdown-item:hover{
 
 /***HERO IMAGE***/
 .hero-image{
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: relative;
   z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 1;
 }
 .img{
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 } 
 .hero-text{
@@ -191,6 +232,8 @@ a.dropdown-item:hover{
   text-align: right;
   color: white;
   width: 40%;
+  opacity: 1;
+  transform: translateX(0);
  }
 .hero-text::after{
   content: "";
@@ -219,6 +262,8 @@ a.dropdown-item:hover{
   margin-bottom: var(--line-spacing);
   position: relative;
   color: var(--grey);
+  opacity: 0;
+  transform: translateY(100px);
 }
 .heading-left::after{
   content: "";
@@ -236,33 +281,30 @@ a.dropdown-item:hover{
 }
 .welcome-text-section{
   width: 55%;
+  /* opacity: 0;
+  transform: translateY(400px); */
+ 
 }
 .sub-heading{
   font-size: 1.4rem;
   letter-spacing: .7px;
   color: var(--grey);
+  opacity: 0;
+  transform: translateY(100px);
 }
 .body-text{
   margin-bottom: 4rem;
   font-size: var(--para-size);
   color: var(--grey);
-}
-.contact-us{
-  padding: .5rem 1.6rem;
-  border-radius: var(--btn-radius);
-  border: var(--btn-border);
-  color: var(--grey);
-  transition: .2s;
-  font-size: 1.2rem;
-}
-.contact-us:hover{
-  background-color: var(--blue);
-  color: white;
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 /**CAROUSEL**/
 .welcome-carousel-section{
   width: 40%;
+  opacity: 0;
+  transform: translateX(400px);
 }
 .carousel-inner{
   background-color: none !important;
@@ -294,15 +336,17 @@ a.dropdown-item:hover{
   height: 110vh;
   width: 50%;
   margin: auto;
-  padding: 5% 0;
+  padding: 2% 0;
   color: var(--grey) !important; 
 }
 .about-us-section .header{
   width: 22%;
   margin: auto;
   font-size: var(--heading-size);
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
   border-bottom: .4vh var(--blue) solid;
+  opacity: 0;
+  transform: translateY(150px);
 }
 .features-container .row .col-lg-4{
   margin-bottom: 4vh !important;
@@ -311,17 +355,25 @@ a.dropdown-item:hover{
   width: 9vw;
   transition: .5s;
   padding: 2rem;
+  opacity: 0;
+  transform: translateY(40px);
 }
 .feature-text{
   font-size: 1.2rem;
   line-height: 1.5rem;
+  opacity: 0;
+  transform: translateY(40px);
 }
 .feature-img:hover{
   transform: scale(1.4);
 }
 .learn-more-btn{
   text-align: center;
-  padding-top: 4vh;
+  padding-top: 3vh;
+}
+.about-btn{
+  opacity: 0;
+  transform: translateY(10px);
 }
 .learn-more{
   padding: .5rem 3rem;
@@ -334,6 +386,8 @@ a.dropdown-item:hover{
   text-align: center;
   position: relative;
   transition: all .5s;
+  opacity: 0;
+  transform: translateY(50px);
 }
 .learn-more span{
   position: relative;
@@ -347,7 +401,7 @@ a.dropdown-item:hover{
   width: 0;
   height: 100%;
   background: var(--blue);
-  border-radius: var(--btn-border);
+  border-radius: var(--btn-radius);
   transition: all .5s ease-in-out;
 }
 .learn-more:hover{
@@ -360,12 +414,13 @@ a.dropdown-item:hover{
 
 /*****Solution Banner CSS****/
 .solution-banner{
-  width: 100%;
+  width: 0%;
   height: 50vh;
   background-image: url(/images/our-solutions-banner.png);
   background-size: cover;
   padding: 8rem;
   color: white;
+  opacity: 0;
 }
 
 .solution-subheading{
@@ -375,9 +430,13 @@ a.dropdown-item:hover{
   font-size: 1.5rem;
   border-bottom: .4vh var(--blue) solid;
   margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(50px);
 }
 .solution-heading {
   font-size: var(--heading-size);
+  opacity: 0;
+  transform: translateY(50px);
 }
 .solution-heading span{
   color: var(--blue);
@@ -388,6 +447,8 @@ a.dropdown-item:hover{
   font-weight: 500;
   margin-bottom: var(--line-spacing);
   position: relative;
+  transform: translateY(100px);
+  opacity: 0;
 }
 .heading-right::after{
   content: "";
@@ -421,7 +482,7 @@ a.dropdown-item:hover{
 
 /******FOOTER CSS******/
 .footer{
-  height: 50vh;
+  height: 0vh;
   background-image: url("/images/footer-banner.png");
   background-position: center;
   background-size: cover;
